@@ -26,7 +26,7 @@ formulario.addEventListener('submit', procesaTodo);
 
 
 ///////////////////////////////////////////////////////////////////
-/*const apy_key='' // ruta de donde sacamos informacion
+/*const API_KEY='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' // ruta de donde sacamos informacion
 
 async function getCompletion(prompt) {
     const response = await fetch(`https://api.openai.com/v1/completions`, {

@@ -11,9 +11,9 @@ import {db_uri} from './index.js'
 const dbConnection = async () =>{
     try {
       const db = await connect(db_uri);
-      console.log('Database connection successful', db.connection.name);
+      console.log('Database connection se conecto', db.connection.name);
     } catch(error){
-      console.error('Database connection error', error)
+      console.error('Database connection error no se conecto', error)
     }
   };
   
