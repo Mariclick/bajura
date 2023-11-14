@@ -62,7 +62,27 @@ button.addEventListener("click", async () => {
     const response = await getCompletion(prompt.value);
     console.log(response);
     output.innerHTML = response.choices[0].text;
-  });*/
+  });
+  
+  
+  
+ * @swagger
+ * /users:
+ *   get:
+ *    summary: return all users
+ *    tags: [User]
+ *    responses:
+ *      200:
+ *        description: all users
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: array
+ *              items:
+ *                $ref: '#components/schema/User'
+ *      500:
+ *        description: Internal Server Error
+ */
 
 
 

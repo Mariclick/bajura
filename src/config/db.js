@@ -1,9 +1,4 @@
-
-//const uri = `mongodb+srv://MOTHERSHIP:${password}@cluster0.ibgqjjw.mongodb.net/${dbname} `
-//const dbname = ''
-//const password = 'HkMd30Z3LFBEYANZ'
-
-
+//mongodb+srv://Mothership:Le0Uuyvu@mothership.fva2lm4.mongodb.net/?retryWrites=true&w=majority
 import {connect} from 'mongoose';
 import {db_uri} from './index.js'
 
@@ -11,7 +6,7 @@ import {db_uri} from './index.js'
 const dbConnection = async () =>{
     try {
       const db = await connect(db_uri);
-      console.log('Database connection se conecto', db.connection.name);
+      console.log('Database connection se conecto!!!!!1', db.connection.name);
     } catch(error){
       console.error('Database connection error no se conecto', error)
     }
