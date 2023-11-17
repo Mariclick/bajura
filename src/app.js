@@ -3,11 +3,8 @@ import { port } from './config/index.js';
 import dbConnection from './config/db.js';
 import userRoutes from  './routes/user.js';
 import swaggerUI from 'swagger-ui-express';
-import swaggerJsDoc from 'swagger-jsdoc';
+import swaggerJSDoc from 'swagger-jsdoc';
 import path from 'path';
-
-
-
 
 const swaggerSpect ={
     definition: {
@@ -28,8 +25,7 @@ const swaggerSpect ={
        ], 
     
 }
-export { swaggerJsDoc as default }
-
+export { swaggerJSDoc as default }
 
 const app= express(); 
 dbConnection()
@@ -40,7 +36,7 @@ dbConnection()
 /*app.use(
   '/api-doc',swaggerUI.serve,swaggerUI.setup(swaggerJsDoc(swaggerSpect)))*/
 app.use('/api-doc', swaggerUI.serve);
-app.use('/api-doc', swaggerUI.setup(swaggerSpect));
+app.get('/api-doc', swaggerUI.setup(swaggerSpect));
 
 
 
